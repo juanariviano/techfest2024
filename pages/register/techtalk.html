@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>TECHFEST 2024</title>
+</head>
+<body>
+    <div class="decorator triangle-thingy-img-decorator-techtalk">
+        <img src="../../assets/image/thingy/Triangle Thingy.png" alt="">
+    </div>
+
+    <div class="decorator line-thingy-img-decorator">
+        <img src="../../assets/image/thingy/Line Thingy.png" alt="">
+    </div>
+
+    <nav class="nav">
+        <a href="../../index.html">
+            <div class="logo-wrapper">
+                <img src="../../assets/image/TechFest Logo.png" alt="">
+            </div>
+        </a>
+        <div class="item-wrapper">
+            <ul>    
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="close">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>  
+                </li> 
+                <a href="../../pages/techtalk/index.html">
+                    <li>
+                        TechTalk
+                    </li>
+                </a>           
+                <a href="../competititon/index.html">
+                    <li>Competition</li>
+                </a>    
+                <a href="../techexpo/index.html"><li>TechExpo</li></a>
+
+                <a href="../TechShowcase/index.html"><li>Showcase</li></a>
+                
+            </ul>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hamburger">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>          
+    </nav>
+    
+    <div class="dialog" id="techtalk-required-dialog">
+        <div class="dialog-content">
+            <h3>Please fill all required question</h3>
+            <div class="back" id="techtalk-required-back">Back</div>
+        </div>
+    </div>
+
+    <div class="dialog" id="techtalk-submit-dialog">
+        <div class="dialog-content">
+            <h3>Make sure to double check</h3>
+            <div class="back" id="techtalk-submit-back">Back</div>
+            <div class="back submit" id="techtalk-submit-submit">Submit</div>
+        </div>
+    </div>
+
+    <section class="register">
+        <h1>register techtalk</h1>
+
+        <form>
+            <div class="button-group">
+                <div class="choice choice-techtalk-binusian" data-value="Binusian">Binusian</div>
+                <div class="choice choice-techtalk-binusian" data-value="Non-Binusian">Non-Binusian</div>
+            </div>
+    
+            <div class="question">
+                <h3>Nama Lengkap</h3>
+                <p>Silahkan Masukkan Nama Lengkap Anda</p>
+                <input type="text" id="nama-techtalk" placeholder="Nama Lengkap">
+            </div>
+    
+            <div class="question">
+                <h3>Nomor Induk Mahasiswa (NIM)</h3>
+                <p>Silahkan Masukkan NIM Anda</p>
+                <input type="text" id="nim-techtalk" placeholder="NIM">
+            </div>
+    
+            <div class="question">
+                <h3>Email</h3>
+                <p>Silahkan Masukkan Email Anda</p>
+                <input type="text" id="email-techtalk" placeholder="Email">
+            </div>
+    
+            <div class="question">
+                <h3>ID LINE</h3>
+                <p>Silahkan Masukkan ID LINE Anda</p>
+                <input type="text" id="line-techtalk" placeholder="ID Line">
+            </div>
+    
+            <div class="question">
+                <h3>Instansi</h3>
+                <p>Silahkan Masukkan Universitas asal Anda</p>
+                <input type="text" id="instansi-techtalk" placeholder="Instansi">
+            </div>
+    
+            <div class="question">
+                <h3>Jurusan</h3>
+                <p>Silahkan Masukkan Jurusan Anda</p>
+                <input type="text" id="jurusan-techtalk" placeholder="Jurusan">
+            </div>
+    
+            <div class="question" id="region-question">
+                <h3>Region Binus</h3>
+                <p>Silahkan Masukkan darimana region Binus Anda</p>
+                <select id="region-techtalk">
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Bandung">Bandung</option>
+                    <option value="Semarang">Semarang</option>
+                    <option value="Malang">Malang</option>
+                    <option value="Surabaya">Surabaya</option>
+                </select>
+            </div>
+    
+            <h3>Ketersediaan hadir</h3>
+            <p>Silahkan ceklist ketersediaan hadir anda</p>
+            <p>Notes : Binusian Kemanggisan dan Alam Sutera wajib hadir onsite</p>
+    
+            <div class="button-group">
+                <div class="choice choice-techtalk-place">Online</div>
+                <div class="choice choice-techtalk-place">Onsite</div>
+            </div>
+            
+            <br>
+    
+            <button type="button" id="techtalk-submit" class="submit">Submit</button>
+        </form>
+    </section>
+
+
+    <footer>
+
+      <div class="top">
+        <div class="left">
+            <img src="../../assets/image/TechFest Logo.png" alt="">
+        </div>
+
+        <div class="right">
+            <div class="quick-link">
+                <ul>
+                    <a href="../techtalk/index.html"><li>TechTalk</li></a>
+              <a href="../competititon/index.html"><li>Competition</li></a>
+              <a href="../TechShowcase/index.html"><li>Showcase</li></a>
+                </ul>
+            </div>
+            <div class="info">
+                <ul>
+                    <a href=""><li>About</li></a>
+                    <a href=""><li>FAQ</li></a>
+                </ul>
+            </div>
+            <div class="contact">
+                <a href="">
+                    <img src="../../assets/image/social/gmail.png" alt="">
+                </a>
+                <a href="">
+                    <img src="../../assets/image/social/line.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/techfest.himti/">
+                    <img src="../../assets/image/social/instagram.png" alt="">
+                </a>
+            </div>
+        </div>
+      </div>  
+
+      <div class="bottom">
+        <div class="left">
+            <p>© 2024 TECHFEST - HIMTI BINUS</p>
+        </div>
+
+        <div class="right">
+            <div class="logo">
+                <img src="../../assets/image/Binus Logo.png" alt="">
+            </div>
+
+            <div class="logo">
+                <img src="../../assets/image/Himti Logo.png" alt="">
+            </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+</body>
+</html>
