@@ -81,6 +81,22 @@
     flex-direction: column;
 }
 
+.showcase-content .search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase-content .search-container input{
+    height: 30px;
+    width: 250px;
+    padding: 15px;
+    border-radius: 3px;
+    border: none;
+    text-align: center;
+}
+
 .card{
     display: flex;
     flex-direction: row;
@@ -93,20 +109,19 @@
 }
 
 .card .img-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 15rem;
     height: 20rem;
-    margin-right: 2rem;
 }
 
 .card .img-wrapper img{
-    width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
+    border-radius: 10px;
 }
 
 .card .description{
-    width: 450px;
+    width: 1000px;
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 2rem;
@@ -114,7 +129,7 @@
 
 .description .top{
    overflow: hidden;
-   height: 55%;
+   height: auto;
 }
   
 .description .top h2, .description .top p{
@@ -174,7 +189,7 @@
     }
 
     .card .top{
-        height: 60%;
+        height: auto;
     }
 
     .card .bottom h3{
@@ -205,13 +220,21 @@
         font-size: 1.2rem;
     }
 
-    .card .top p{
-        font-size: 1rem;
+    .card .top p {
+        font-size: 10px;
+        margin: 0 0px;
+        text-align: justify;
     }
 
     .card .bottom h3{
         font-size: 0.9rem;
     }
+
+    .card .description {
+        width: 80%; /* Contoh penggunaan persentase */
+        margin-left: 2rem;
+    }
+    
 }
 
 @media (max-width:750px){
@@ -223,9 +246,21 @@
     .card .top{
         margin-top: 2rem;
     }
+
+    .card .description{
+        width: 400px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 2rem;
+    }
 }
 
 @media(max-width:550px){
+    .card .description {
+        width: 90%; /* Contoh penggunaan persentase yang lebih besar */
+        margin-left: 1rem; /* Penggunaan margin yang responsif */
+    }
+
     .showcase-header-title{
         font-size: 0.8rem;
     }
@@ -252,7 +287,7 @@
     }
 
     .card .img-wrapper{
-        margin-left: 2rem;
+        margin-top: 30px;
     }
 
     .card .top, .card .bottom{
@@ -317,6 +352,191 @@
     body > div.showcase-container > div.showcase-content > div:nth-child(4) > div.description > div.bottom > div.left > ul {
         padding: 0;
     }
+
+    body > div.showcase-container > div.showcase-content > div:nth-child(5) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(6) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(7) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(8) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(9) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(10) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(11) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(12) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(13) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(14) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(15) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(16) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(17) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(18) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(19) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(20) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(21) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(22) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(23) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(24) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(25) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(26) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(27) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(28) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(29) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(30) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(31) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(32) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(33) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(34) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(35) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(36) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(37) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(38) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(39) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(40) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(41) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(42) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(43) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(44) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(45) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(46) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(47) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(48) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(49) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
+    body > div.showcase-container > div.showcase-content > div:nth-child(50) > div.description > div.bottom > div.left > ul {
+        padding: 0;
+    }
+    
 
 }
 

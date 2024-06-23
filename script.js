@@ -76,123 +76,228 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Form techtalk & compe
+    // // Form techtalk & compe
 
-    // techtalk non binusian region
+    // // techtalk non binusian region
 
-        document.querySelectorAll('.choice-techtalk-binusian').forEach(choice => {
-            choice.addEventListener('click', function() {
-                document.querySelectorAll('.choice-techtalk-binusian').forEach(item => item.classList.remove('active'));
-                this.classList.add('active');
-                const value = this.getAttribute('data-value');
-                if (value === 'Non-Binusian') {
-                    document.getElementById('region-question').style.display = 'none';
-                } else {
-                    document.getElementById('region-question').style.display = 'block';
-                }
-            });
-        });
+    //     document.querySelectorAll('.choice-techtalk-binusian').forEach(choice => {
+    //         choice.addEventListener('click', function() {
+    //             document.querySelectorAll('.choice-techtalk-binusian').forEach(item => item.classList.remove('active'));
+    //             this.classList.add('active');
+    //             const value = this.getAttribute('data-value');
+    //             if (value === 'Non-Binusian') {
+    //                 document.getElementById('region-question').style.display = 'none';
+    //             } else {
+    //                 document.getElementById('region-question').style.display = 'block';
+    //             }
+    //         });
+    //     });
 
-        // Optional: Set default active class and region visibility
-        document.querySelector('.choice-techtalk-binusian[data-value="Binusian"]').classList.add('active');
+    //     // Optional: Set default active class and region visibility
+    //     document.querySelector('.choice-techtalk-binusian[data-value="Binusian"]').classList.add('active');
         
-    // Create choice-techtalk-binusian
-    const choicesTechtalkBinusian = document.querySelectorAll('.choice-techtalk-binusian')
-    handleSelection(choicesTechtalkBinusian, choicesTechtalkBinusian[0].textContent)
+    // // Create choice-techtalk-binusian
+    // const choicesTechtalkBinusian = document.querySelectorAll('.choice-techtalk-binusian')
+    // handleSelection(choicesTechtalkBinusian, choicesTechtalkBinusian[0].textContent)
 
-    // Create choice-techtalk-place
-    const choicesTechtalkPlace = document.querySelectorAll('.choice-techtalk-place')
-    handleSelection(choicesTechtalkPlace, choicesTechtalkPlace[0].textContent)
+    // // Create choice-techtalk-place
+    // const choicesTechtalkPlace = document.querySelectorAll('.choice-techtalk-place')
+    // handleSelection(choicesTechtalkPlace, choicesTechtalkPlace[0].textContent)
 
 
-    function getValueById(elementId) {
-        var element = document.getElementById(elementId);
-        if (element) {
-            return element.value;
-        } else {
-            return null;
-        }
-    }
+    // function getValueById(elementId) {
+    //     var element = document.getElementById(elementId);
+    //     if (element) {
+    //         return element.value;
+    //     } else {
+    //         return null;
+    //     }
+    // }
 
-    //require dialog
-    const techtalkRequiredDialog = document.getElementById("techtalk-required-dialog")
-    const techtalkRequiredBack = document.getElementById("techtalk-required-back")
+    // //require dialog
+    // const techtalkRequiredDialog = document.getElementById("techtalk-required-dialog")
+    // const techtalkRequiredBack = document.getElementById("techtalk-required-back")
     
-    //submit dialog
-    const techtalkSubmitDialog = document.getElementById("techtalk-submit-dialog")
-    const techTalkSubmitBack = document.getElementById("techtalk-submit-back")
-    const techtalkSubmitSubmit = document.getElementById("techtalk-submit-submit")
+    // //submit dialog
+    // const techtalkSubmitDialog = document.getElementById("techtalk-submit-dialog")
+    // const techTalkSubmitBack = document.getElementById("techtalk-submit-back")
+    // const techtalkSubmitSubmit = document.getElementById("techtalk-submit-submit")
     
-    try{
+    // try{
 
-        document.getElementById("techtalk-submit").addEventListener("click", function() {
-            let techtalkNama = getValueById("nama-techtalk")
-            let techtalkNim = getValueById("nim-techtalk")
-            let techtalkEmail = getValueById("email-techtalk")
-            let techtalkLine = getValueById("line-techtalk")
-            let techtalkInstansi = getValueById("instansi-techtalk")
-            let techtalkJurusan = getValueById("jurusan-techtalk")
-            let techtalkRegion = getValueById("region-techtalk")
+    //     document.getElementById("techtalk-submit").addEventListener("click", function() {
+    //         let techtalkNama = getValueById("nama-techtalk")
+    //         let techtalkNim = getValueById("nim-techtalk")
+    //         let techtalkEmail = getValueById("email-techtalk")
+    //         let techtalkLine = getValueById("line-techtalk")
+    //         let techtalkInstansi = getValueById("instansi-techtalk")
+    //         let techtalkJurusan = getValueById("jurusan-techtalk")
+    //         let techtalkRegion = getValueById("region-techtalk")
     
-            if (!techtalkNama || !techtalkNim || !techtalkEmail || !techtalkLine || !techtalkInstansi || !techtalkJurusan || !techtalkRegion || !selectedChoiceTechtalkBinusian || !selectedChoiceTechtalkPlace) {
-                techtalkRequiredDialog.classList.add("display-block")
-                return
-            }else{
-                techtalkSubmitDialog.classList.add("display-block")
-            }
+    //         if (!techtalkNama || !techtalkNim || !techtalkEmail || !techtalkLine || !techtalkInstansi || !techtalkJurusan || !techtalkRegion || !selectedChoiceTechtalkBinusian || !selectedChoiceTechtalkPlace) {
+    //             techtalkRequiredDialog.classList.add("display-block")
+    //             return
+    //         }else{
+    //             techtalkSubmitDialog.classList.add("display-block")
+    //         }
             
-        });
-    } catch(error){
-        console.log(error)
-    }
+    //     });
+    // } catch(error){
+    //     console.log(error)
+    // }
 
-    techtalkRequiredBack.addEventListener("click", function() {
-        techtalkRequiredDialog.classList.remove("display-block")
-    });
+    // techtalkRequiredBack.addEventListener("click", function() {
+    //     techtalkRequiredDialog.classList.remove("display-block")
+    // });
 
-    techTalkSubmitBack.addEventListener("click", function() {
-        techtalkSubmitDialog.classList.remove("display-block")
-    });
+    // techTalkSubmitBack.addEventListener("click", function() {
+    //     techtalkSubmitDialog.classList.remove("display-block")
+    // });
 
-    try{
+    // try{
 
-        techtalkSubmitSubmit.addEventListener("click", function() {
-            let techtalkNama = getValueById("nama-techtalk");
-            let techtalkNim = getValueById("nim-techtalk");
-            let techtalkEmail = getValueById("email-techtalk");
-            let techtalkLine = getValueById("line-techtalk");
-            let techtalkInstansi = getValueById("instansi-techtalk");
-            let techtalkJurusan = getValueById("jurusan-techtalk");
-            let techtalkRegion = getValueById("region-techtalk");
+    //     techtalkSubmitSubmit.addEventListener("click", function() {
+    //         let techtalkNama = getValueById("nama-techtalk");
+    //         let techtalkNim = getValueById("nim-techtalk");
+    //         let techtalkEmail = getValueById("email-techtalk");
+    //         let techtalkLine = getValueById("line-techtalk");
+    //         let techtalkInstansi = getValueById("instansi-techtalk");
+    //         let techtalkJurusan = getValueById("jurusan-techtalk");
+    //         let techtalkRegion = getValueById("region-techtalk");
         
-            // console.log("Nama:", techtalkNama);
-            // console.log("NIM:", techtalkNim);
-            // console.log("Email:", techtalkEmail);
-            // console.log("Line:", techtalkLine);
-            // console.log("Instansi:", techtalkInstansi);
-            // console.log("Jurusan:", techtalkJurusan);
-            // console.log("Region:", techtalkRegion);
-            // console.log("Selected Place:", selectedChoiceTechtalkPlace);
-            // console.log("Selected Binusian:", selectedChoiceTechtalkBinusian);
+    //         // console.log("Nama:", techtalkNama);
+    //         // console.log("NIM:", techtalkNim);
+    //         // console.log("Email:", techtalkEmail);
+    //         // console.log("Line:", techtalkLine);
+    //         // console.log("Instansi:", techtalkInstansi);
+    //         // console.log("Jurusan:", techtalkJurusan);
+    //         // console.log("Region:", techtalkRegion);
+    //         // console.log("Selected Place:", selectedChoiceTechtalkPlace);
+    //         // console.log("Selected Binusian:", selectedChoiceTechtalkBinusian);
         
-            const techtalkForm = new GoogleFormSubmitter("https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_bJQhqL7b_6qLJIUdYwQQzPnEHTSpPHM74OTHySmdSlkOAA/formResponse")
+    //         const techtalkForm = new GoogleFormSubmitter("https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_bJQhqL7b_6qLJIUdYwQQzPnEHTSpPHM74OTHySmdSlkOAA/formResponse")
     
-            techtalkForm.setDetail("733445327", techtalkNama)
-            techtalkForm.setDetail("1424502244", techtalkNim)
-            techtalkForm.setDetail("971153758", techtalkEmail)
-            techtalkForm.setDetail("1359042562", techtalkLine)
-            techtalkForm.setDetail("1577440915", techtalkInstansi)
-            techtalkForm.setDetail("584905853", techtalkJurusan)
-            techtalkForm.setDetail("1259947341", techtalkRegion)
-            techtalkForm.setDetail("525745369",selectedChoiceTechtalkBinusian)
-            techtalkForm.setDetail("689670236", selectedChoiceTechtalkPlace)
+    //         techtalkForm.setDetail("733445327", techtalkNama)
+    //         techtalkForm.setDetail("1424502244", techtalkNim)
+    //         techtalkForm.setDetail("971153758", techtalkEmail)
+    //         techtalkForm.setDetail("1359042562", techtalkLine)
+    //         techtalkForm.setDetail("1577440915", techtalkInstansi)
+    //         techtalkForm.setDetail("584905853", techtalkJurusan)
+    //         techtalkForm.setDetail("1259947341", techtalkRegion)
+    //         techtalkForm.setDetail("525745369",selectedChoiceTechtalkBinusian)
+    //         techtalkForm.setDetail("689670236", selectedChoiceTechtalkPlace)
     
-            techtalkForm.submit()
-            techtalkSubmitDialog.classList.remove("display-block")
-        });
-    }catch(error){
-        console.log(error)
-    }
+    //         techtalkForm.submit()
+    //         techtalkSubmitDialog.classList.remove("display-block")
+    //     });
+    // }catch(error){
+    //     console.log(error)
+    // }
+
+    // TechTalk: Non-Binusian region selection
+document.querySelectorAll('.choice-techtalk-binusian').forEach(choice => {
+  choice.addEventListener('click', function() {
+      document.querySelectorAll('.choice-techtalk-binusian').forEach(item => item.classList.remove('active'));
+      this.classList.add('active');
+      const value = this.getAttribute('data-value');
+      if (value === 'Non-Binusian') {
+          document.getElementById('region-question').style.display = 'none';
+      } else {
+          document.getElementById('region-question').style.display = 'block';
+      }
+  });
+});
+
+// Optional: Set default active class and region visibility
+document.querySelector('.choice-techtalk-binusian[data-value="Binusian"]').classList.add('active');
+
+// Create choice-techtalk-binusian
+const choicesTechtalkBinusian = document.querySelectorAll('.choice-techtalk-binusian');
+handleSelection(choicesTechtalkBinusian, choicesTechtalkBinusian[0].textContent);
+
+// Create choice-techtalk-place
+const choicesTechtalkPlace = document.querySelectorAll('.choice-techtalk-place');
+handleSelection(choicesTechtalkPlace, choicesTechtalkPlace[0].textContent);
+
+function getValueById(elementId) {
+  var element = document.getElementById(elementId);
+  if (element) {
+      return element.value;
+  } else {
+      return null;
+  }
+}
+
+// Require dialog
+const techtalkRequiredDialog = document.getElementById("techtalk-required-dialog");
+const techtalkRequiredBack = document.getElementById("techtalk-required-back");
+
+// Submit dialog
+const techtalkSubmitDialog = document.getElementById("techtalk-submit-dialog");
+const techTalkSubmitBack = document.getElementById("techtalk-submit-back");
+const techtalkSubmitSubmit = document.getElementById("techtalk-submit-submit");
+
+try {
+  document.getElementById("techtalk-submit").addEventListener("click", function() {
+      let techtalkNama = getValueById("nama-techtalk");
+      let techtalkNim = getValueById("nim-techtalk");
+      let techtalkEmail = getValueById("email-techtalk");
+      let techtalkLine = getValueById("line-techtalk");
+      let techtalkInstansi = getValueById("instansi-techtalk");
+      let techtalkJurusan = getValueById("jurusan-techtalk");
+      let techtalkRegion = getValueById("region-techtalk");
+
+      if (!techtalkNama || !techtalkNim || !techtalkEmail || !techtalkLine || !techtalkInstansi || !techtalkJurusan || !techtalkRegion || !selectedChoiceTechtalkBinusian || !selectedChoiceTechtalkPlace) {
+          techtalkRequiredDialog.classList.add("display-block");
+          return;
+      } else {
+          techtalkSubmitDialog.classList.add("display-block");
+      }
+  });
+} catch (error) {
+  console.log(error);
+}
+
+techtalkRequiredBack.addEventListener("click", function() {
+  techtalkRequiredDialog.classList.remove("display-block");
+});
+
+techTalkSubmitBack.addEventListener("click", function() {
+  techtalkSubmitDialog.classList.remove("display-block");
+});
+
+try {
+  techtalkSubmitSubmit.addEventListener("click", function() {
+      let techtalkNama = getValueById("nama-techtalk");
+      let techtalkNim = getValueById("nim-techtalk");
+      let techtalkEmail = getValueById("email-techtalk");
+      let techtalkLine = getValueById("line-techtalk");
+      let techtalkInstansi = getValueById("instansi-techtalk");
+      let techtalkJurusan = getValueById("jurusan-techtalk");
+      let techtalkRegion = getValueById("region-techtalk");
+
+      const techtalkForm = new GoogleFormSubmitter("https://docs.google.com/forms/u/0/d/e/1FAIpQLSe_bJQhqL7b_6qLJIUdYwQQzPnEHTSpPHM74OTHySmdSlkOAA/formResponse");
+
+      techtalkForm.setDetail("733445327", techtalkNama);
+      techtalkForm.setDetail("1424502244", techtalkNim);
+      techtalkForm.setDetail("971153758", techtalkEmail);
+      techtalkForm.setDetail("1359042562", techtalkLine);
+      techtalkForm.setDetail("1577440915", techtalkInstansi);
+      techtalkForm.setDetail("584905853", techtalkJurusan);
+      techtalkForm.setDetail("1259947341", techtalkRegion);
+      techtalkForm.setDetail("525745369", selectedChoiceTechtalkBinusian);
+      techtalkForm.setDetail("689670236", selectedChoiceTechtalkPlace);
+
+      techtalkForm.submit();
+      techtalkSubmitDialog.classList.remove("display-block");
+
+      // Display pop-up for techexpo vote
+      alert("Your data has already been submitted! Thank you for your submission! Please make sure to participate in the vote for the techexpo if you haven't yet.");
+  });
+} catch (error) {
+  console.log(error);
+}
+
 
     //form competition
     const competitionSubmitSubmit = document.getElementById("competition-submit-submit")
@@ -390,3 +495,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+
+
+  // alert showcase
+  function showAlertAndRedirect() {
+    alert("If you want to register for the techtalk and haven't done so, you can go to the techtalk page. If you have already registered, please ignore this message.");
+    // Note: The redirection will happen automatically because the <a> tag is inside the button
+}
+
+
+// seacrh showcase
+document.addEventListener("DOMContentLoaded", function() {
+  const searchInput = document.getElementById("search");
+  
+  searchInput.addEventListener("input", function() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const cards = document.querySelectorAll(".card");
+
+      cards.forEach(card => {
+          const projectName = card.querySelector("h2").textContent.toLowerCase();
+          const projectId = projectName.split(".")[0].trim(); // Mendapatkan nomor proyek dari judul
+
+          if (projectId.includes(searchTerm) || projectName.includes(searchTerm)) {
+              card.style.display = "block";
+          } else {
+              card.style.display = "none";
+          }
+      });
+  });
+});
