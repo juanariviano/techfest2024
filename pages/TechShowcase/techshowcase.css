@@ -151,6 +151,11 @@
     margin: 1.5rem 0;
 }
 
+.card .card-left{
+    display: flex;
+    flex-direction: column;
+}
+
 .card .img-wrapper{
     display: flex;
     justify-content: center;
@@ -287,7 +292,7 @@
     }
 
     .card .top{
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     .card .description{
@@ -302,6 +307,10 @@
     .card .description {
         width: 90%; /* Contoh penggunaan persentase yang lebih besar */
         margin-left: 1rem; /* Penggunaan margin yang responsif */
+    }
+
+    .card .top{
+        margin-top: 0rem;
     }
 
     .showcase-header-title{
