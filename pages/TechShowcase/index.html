@@ -80,15 +80,6 @@
         <h1>SPACE FOR</h1>
         <h1>SHOWCASING WORK</h1>
       </div>
-      <div class="showcase-button">
-        <button onclick="showAlertAndRedirect()">
-          <a
-            href="https://www.youtube.com/"
-            style="text-decoration: none; color: inherit"
-            >Vote Here</a
-          >
-        </button>
-      </div>
     </div>
 
     <div class="showcase-container">
@@ -115,14 +106,31 @@
           </p>
           <p>This event will be held online.</p>
         </div>
+
+        <div class="showcase-button">
+          <button onclick="showAlertAndRedirect()">
+            <a
+              href="https://www.youtube.com/"
+              style="text-decoration: none; color: inherit" id="vote">Vote Here</a
+            >
+          </button>
+        </div>
       </div>
 
       <div class="showcase-content">
-
-        <!-- <div class="search-container">
+        <div class="search-container">
             <label for="searchInput">Search Project</label>
             <input type="search" id="search" placeholder="Number / Name Project">
-        </div> -->
+        </div>
+
+        <div class="pagination-container">
+          <button class="pagination-button" value="0">ALL</button>
+          <button class="pagination-button" value="1">1</button>
+          <button class="pagination-button" value="2">2</button>
+          <button class="pagination-button" value="3">3</button>
+          <button class="pagination-button" value="4">4</button>
+          <button class="pagination-button" value="5">5</button>
+        </div>
 
         <div class="card">
           <div class="img-wrapper">
@@ -1512,6 +1520,25 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="pagination-container">
+          <button class="pagination-button" value="0">ALL</button>
+          <button class="pagination-button" value="1">1</button>
+          <button class="pagination-button" value="2">2</button>
+          <button class="pagination-button" value="3">3</button>
+          <button class="pagination-button" value="4">4</button>
+          <button class="pagination-button" value="5">5</button>
+        </div>
+
+        <div class="showcase-button">
+          <button>
+            <a
+              href="#vote"
+              style="text-decoration: none; color: inherit"
+              >BACK TO TOP</a
+            >
+          </button>
         </div>
       </div>
     </div>

@@ -504,23 +504,41 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 
-// seacrh showcase
 document.addEventListener("DOMContentLoaded", function() {
+  const cards = document.querySelectorAll(".card");
   const searchInput = document.getElementById("search");
   
+  // seacrh showcase
   searchInput.addEventListener("input", function() {
       const searchTerm = searchInput.value.toLowerCase();
-      const cards = document.querySelectorAll(".card");
-
       cards.forEach(card => {
           const projectName = card.querySelector("h2").textContent.toLowerCase();
           const projectId = projectName.split(".")[0].trim(); // Mendapatkan nomor proyek dari judul
 
           if (projectId.includes(searchTerm) || projectName.includes(searchTerm)) {
-              card.style.display = "block";
+              card.style.display = "flex";
           } else {
               card.style.display = "none";
           }
       });
   });
+
+  //pagination showcase
+  const paginationButton = document.querySelectorAll(".pagination-button");
+  const totalDisplay = 8;
+
+  paginationButton.forEach(btn => {
+    btn.onclick = ()=>{
+      numPage = Number(btn.value);
+      for(i = 0; i < cards.length; i++){
+        if(i >= (numPage - 1) * totalDisplay && i < numPage * totalDisplay || numPage === 0){
+          cards[i].style.display = "flex";
+        } else{
+          cards[i].style.display = "none";
+        }
+      }
+    };
+  });
 });
+
+

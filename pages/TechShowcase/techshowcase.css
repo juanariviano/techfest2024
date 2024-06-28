@@ -1,5 +1,3 @@
-
-
 .showcase-header, .showcase-container{
     display: flex;
     flex-direction: column;
@@ -86,15 +84,60 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Atmospheric';
+    gap: 1rem;
 }
 
 .showcase-content .search-container input{
     height: 30px;
     width: 250px;
     padding: 15px;
-    border-radius: 3px;
+    border-radius: 5px;
     border: none;
     text-align: center;
+}
+
+.showcase-button:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.showcase-button:last-child a{
+    font-size: 1rem;
+}
+
+.pagination-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 1rem;
+    gap: 1.5rem;
+}
+
+.pagination-button{
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    border: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.pagination-container button::before{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    z-index: -1;
+    background-image: var(--gradient-horizontal);
+    border-radius: inherit;
 }
 
 .card{
@@ -275,6 +318,28 @@
 
     .showcase-title .description p{
         font-size: 1rem;
+    }
+
+    .pagination-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+        margin-top: 2rem;
+        gap: 0.8rem;
+    }
+    
+    .pagination-button{
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 0.8rem;
+        font-weight: bolder;
+        padding: 0.5rem;
+        text-align: center;
+        border-radius: 10px;
+        position: relative;
+        border: transparent;
+        transition: all 0.3s ease-in-out;
     }
     
     .card{
