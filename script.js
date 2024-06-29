@@ -525,7 +525,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   //pagination showcase
   const paginationButton = document.querySelectorAll(".pagination-button");
-  const totalDisplay = 8;
+  const totalDisplay = 9;
 
   paginationButton.forEach(btn => {
     btn.onclick = ()=>{
