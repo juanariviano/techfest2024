@@ -161,11 +161,13 @@
     justify-content: center;
     align-items: center;
     width: 15rem;
-    height: 20rem;
+    height: auto;
 }
 
-.card .img-wrapper img{
+.card .img-wrapper img {
     border-radius: 10px;
+    width: 15rem;
+    height: auto;
 }
 
 .card .description{
@@ -184,6 +186,10 @@
     margin: 0;
 }
 
+.description .top p {
+    margin-bottom: 0.5rem !important; 
+}
+
 .description .top h2, .description .bottom h3{
     font-family: 'Atmospheric';
     margin-bottom: 0.5rem;
@@ -197,12 +203,11 @@
 .description .bottom .left{
     margin-right: 1.5rem;
     font-weight: 600;
-    width: 50%;
+    width: 75%;
 }
 
 .description .bottom .right{
-    margin-left: 1.5rem;
-    width: 50%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,7 +221,6 @@
     margin-top: 1rem;
     width: 3rem;
     height: 3rem;
-    transform: translateX(12px);
 }
 
 .card .description .bottom .right a img{
@@ -224,6 +228,10 @@
     height: 100%;
     -o-object-fit: contain;
     object-fit: contain;
+}
+
+.description ul {
+    padding-inline-start: 0;
 }
 
 @media (max-width:1100px) {
@@ -245,21 +253,12 @@
     }
 }
 
-@media (max-width:800px) {
-    .showcase-header-title{
-        font-size: 1.3rem;
-    }
-
-    .showcase-title .title h1{
-        font-size: 3.5rem;
-    }
-    
-    .showcase-title .sub-title h1{
-        font-size: 1.3rem;
-    }
-}
-
 @media(max-width:770px){
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .card .top h2{
         font-size: 1.4rem;
     }
@@ -269,7 +268,7 @@
     }
 
     .card .top p {
-        font-size: 10px;
+        font-size: 0.75rem;
         margin: 0 0px;
         text-align: justify;
     }
@@ -279,34 +278,19 @@
     }
 
     .card .description {
-        width: 80%; /* Contoh penggunaan persentase */
-        margin-left: 2rem;
+        width: 90%; /* Contoh penggunaan persentase */
+        margin-top: 0;
+        margin-left: 0;
     }
     
 }
 
-@media (max-width:750px){
-    .card{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card .top{
-        margin-top: 1rem;
-    }
-
-    .card .description{
-        width: 400px;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        margin-left: 2rem;
-    }
-}
-
 @media(max-width:550px){
     .card .description {
-        width: 90%; /* Contoh penggunaan persentase yang lebih besar */
-        margin-left: 1rem; /* Penggunaan margin yang responsif */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
     }
 
     .card .top{
@@ -350,8 +334,8 @@
         border: transparent;
         transition: all 0.3s ease-in-out;
     }
-    
-    .card{
+
+    .card {
         align-items: center;
         margin-bottom: 2.5rem;
     }
@@ -364,19 +348,11 @@
         margin-top: 30px;
     }
 
-    .card .top, .card .bottom{
-        text-align: center;
-        align-items: center;
-        width:80%;
-        margin-left: 1.5rem;
-    }
-
     .card .bottom{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-left: 1.5rem;
     }
 
     .card .bottom .left{
@@ -390,7 +366,8 @@
     .description .bottom .left {
         margin-right: 0rem;
         font-weight: 600;
-        width: 50%;
+        width: 100%;
+        text-align: center;
     }
 
     .description .bottom .right {
