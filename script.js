@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //count down
     const countDownEl = document.querySelector(".count-down")
-    const targetDate = new Date("2024-10-30T00:00:00")
+    const targetDate = new Date("2024-07-20T00:00:00")
 
     function countdown() {
         const now = new Date()
@@ -508,9 +508,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const cards = document.querySelectorAll(".card");
   const searchInput = document.getElementById("search");
   
-  // seacrh showcase
+  // search showcase
   searchInput.addEventListener("input", function() {
-      const searchTerm = searchInput.value.toLowerCase();
+      const searchTerm = searchInput.value.toLowerCase().trim();
       cards.forEach(card => {
           const projectName = card.querySelector("h2").textContent.toLowerCase();
           const projectId = projectName.split(".")[0].trim(); // Mendapatkan nomor proyek dari judul
@@ -523,22 +523,23 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 
-  //pagination showcase
-  const paginationButton = document.querySelectorAll(".pagination-button");
+  // pagination showcase
+  const paginationButtons = document.querySelectorAll(".pagination-button");
   const totalDisplay = 6;
 
-  paginationButton.forEach(btn => {
-    btn.onclick = ()=>{
-      numPage = Number(btn.value);
-      for(i = 0; i < cards.length; i++){
-        if(i >= (numPage - 1) * totalDisplay && i < numPage * totalDisplay || numPage === 0){
+  paginationButtons.forEach(btn => {
+    btn.onclick = () => {
+      const numPage = Number(btn.value);
+      for (let i = 0; i < cards.length; i++) {
+        if ((i >= (numPage - 1) * totalDisplay && i < numPage * totalDisplay) || numPage === 0) {
           cards[i].style.display = "flex";
-        } else{
+        } else {
           cards[i].style.display = "none";
         }
       }
     };
   });
 });
+
 
 
